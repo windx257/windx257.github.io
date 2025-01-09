@@ -181,14 +181,14 @@
                 <span title="发表于 2025.01.07"><i class="far fa-calendar-alt"></i> 2025.01.07</span>
               </div>
               <div class="post-meta-item updated">
-                <span title="更新于 2025.01.07"><i class="far fa-calendar-check"></i> 2025.01.07</span>
+                <span title="更新于 2025.01.09"><i class="far fa-calendar-check"></i> 2025.01.09</span>
               </div>
              
              
             
              <div class="post-meta-item wordcount">
                 
-                  <i class="fas fa-pencil-alt"></i> <span class="post-count">95 字</span>
+                  <i class="fas fa-pencil-alt"></i> <span class="post-count">413 字</span>
                    
                 
                   <i class="far fa-clock"></i> <span class="post-count">1 分钟</span>
@@ -199,18 +199,27 @@
           <div class="content">
             
                   <p>欢迎来到小企鹅的云端知识库! 这是知识库里的第一篇文章~ 网站施工中，请期待~</p>
-<h2 id="快速开始！"><a href="#快速开始！" class="headerlink" title="快速开始！"></a>快速开始！</h2><h3 id="创建一篇新的文章！"><a href="#创建一篇新的文章！" class="headerlink" title="创建一篇新的文章！"></a>创建一篇新的文章！</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="我的建站思路分享"><a href="#我的建站思路分享" class="headerlink" title="我的建站思路分享"></a>我的建站思路分享</h2><h3 id="下载Git和Node-js"><a href="#下载Git和Node-js" class="headerlink" title="下载Git和Node.js"></a>下载Git和Node.js</h3><p>首先，你需要下载Git和Node.js。Git是一个开源的版本控制系统，Node.js是一个JavaScript运行环境。</p>
+<ul>
+<li>Git下载地址: <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+<li>Node.js下载地址: <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></li>
+</ul>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>具体如何安装可见右边的链接: <a target="_blank" rel="noopener" href="https://hexo.io/docs/">Install</a></p>
+<h3 id="注册GitHub账号"><a href="#注册GitHub账号" class="headerlink" title="注册GitHub账号"></a>注册GitHub账号</h3><p>如果你还没有GitHub账号，请注册一个。</p>
+<h3 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h3><p>登录GitHub，新建一个仓库，命名为<code>username.github.io</code>，其中<code>username</code>是你的GitHub用户名。</p>
+<h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;your name&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;your email&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>更多信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;your github email&quot;</span></span><br></pre></td></tr></table></figure>
+<p>直接三个回车，生成SSH Key。<br>然后找到<code>C:\Users\your_name\.ssh</code>目录，打开<code>id_rsa.pub</code>文件，复制里面的内容。</p>
+<p>登录GitHub，点击<code>Settings</code> -&gt; <code>SSH and GPG keys</code> -&gt; <code>New SSH Key</code> -&gt; <code>Title</code>输入一个标题 -&gt; <code>Key</code>粘贴刚才复制的SSH Key -&gt; <code>Add SSH Key</code><br>然后，在GitHub上添加SSH Key。</p>
+<h3 id="推送代码到GitHub"><a href="#推送代码到GitHub" class="headerlink" title="推送代码到GitHub"></a>推送代码到GitHub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>更多信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="访问网站"><a href="#访问网站" class="headerlink" title="访问网站"></a>访问网站</h3><p>打开浏览器，输入<code>http://username.github.io</code>访问你的网站。</p>
+<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><p>在<code>blog/source/_posts</code>目录下新建一个Markdown文件，文件名格式为<code>YYYY-MM-DD-title.md</code>，其中<code>YYYY-MM-DD</code>是文章的发布日期，<code>title</code>是文章的标题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># Hello World</span><br><span class="line"></span><br><span class="line">Welcome to my blog!</span><br></pre></td></tr></table></figure>
 
-<p>更多信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>然后，在命令行输入<code>hexo generate</code>生成静态页面，<code>hexo deploy</code>推送到GitHub，刷新网站，就可以看到刚才写的文章了。</p>
 
              
           </div>
